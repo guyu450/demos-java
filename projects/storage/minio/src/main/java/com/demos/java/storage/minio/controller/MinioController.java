@@ -61,7 +61,7 @@ public class MinioController {
 
             return new ResponseEntity<>(bytes, headers, HttpStatus.OK);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error downloading file: " + e.getMessage().getBytes());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(("Error downloading file: " + e.getMessage()).getBytes());
         }
     }
 
